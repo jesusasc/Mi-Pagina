@@ -1,0 +1,40 @@
+.redes{
+    position:fixed;
+    top: 200px;
+    box-sizing: border-box;
+    left: 0;
+}
+
+.redes ul{
+    list-style: none;
+}
+
+.redes ul li a{
+    display: inline-block;
+    color: aliceblue;
+    background: none;
+    padding: 11px 20px;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.redes ul li .icon-facebook{
+    background: rgb(59, 89, 152);
+}
+
+.redes ul li .icon-instagram{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.redes ul li .icon-twitter{
+    background: rgb(29 161 242);
+}
+
+.redes ul li .icon-youtube2{
+    background: rgb(255, 0, 0);
+}
+/*animacion en cada bloque*/
+
+.redes ul li a:hover{
+    padding: 10px 30px;
+}

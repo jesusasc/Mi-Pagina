@@ -4,19 +4,205 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=Mi Pagina, initial-scale=1.0">
+    <!--GOOGLE FONTS-->
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <!--Animate css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!--LINK del CSS-->
     <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="redes.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="googlemaps.css">
+    <link rel="stylesheet" href="cards.css">
     <title>Mi Pagina</title>
 </head>
 <body>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li id="derecha"><a class="active" href="#about">About</a></li>
-    </ul>
-    <!--SLIDER DE MI PAGINA-->
     <div>
+        <ul id="menu">
+            <li id="submenu"><a id="sub" href="#home">Home</a></li>
+            <li id="submenu"><a id="sub" href="#news">News</a></li>
+            <li id="submenu"><a id="sub" href="#contact">Contact</a></li>
+            <li id="derecha"><a class="activo" href="#about">About</a></li>
+        </ul>
+    </div>
+    
+    <!--SLIDER DE MI PAGINA-->
+    <div id="slider">
         <h2><span>I</span>M<span>POSSIBLE</h2>
     </div>
+
+<!--Bolques de las redes Sociales-->
+<div class="redes"> 
+    <ul>
+        <li><a href="" class="icon-facebook"></a></li>
+        <li><a href="" class="icon-instagram"></a></li>
+        <li><a href="" class="icon-twitter"></a></li>
+        <li><a href="" class="icon-youtube2""></a></li>
+    </ul>
+</div>
+
+    <div>
+        <!--Colocamos el dir para colocar la informacion y las fotos -->
+        <section>
+            <dir>
+                <h3 class="revelarinf">Hacerca de Nosotros</h3>
+                <h3 class="revelarinf">Somos un ambiente alegre con buenas vibras</h3>
+                <img src='images/persona1.jpg' alt="">
+            </dir>
+        </section>
+        <section>
+            <dir>
+                <h3 class="revelarinf">Hacerca de Nosotros</h3>
+                <h3 class="revelarinf">Somos un ambiente alegre con buenas vibras</h3>
+                <img src='images/persona2.jpg' alt="">
+            </dir>
+        </section>
+        <section>
+            <dir>
+                <h3 class="revelarinf">Hacerca de Nosotros</h3>
+                <h3 class="revelarinf">Somos un ambiente alegre con buenas vibras</h3>
+                <img src='images/persona4.jpg' alt="">
+            </dir>
+        </section>
+
+        <!--! Se agrega jAVA SCRIP-->
+        <!--Srcips para JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+
+    <!--Se le agrega como una regla donde muestra el inicio y el final de cada animacion-->
+    <script type="text/javascript">
+        const revelarinf = gsap.utils.toArray('.revelarinf');
+        revelarinf.forEach((text, i) =>{
+            ScrollTrigger.create({
+                trigger: text,
+                toggleClass: 'active',
+                start: "top 90%",
+                end: "top 20%",
+                //se descativa para que no aparesca la regla en la pagina
+                //markers: true
+            })
+        })
+
+        //Animacion para las fotos
+        const imagen = gsap.utils.toArray('img');
+        imagen.forEach((img, i) =>{
+            ScrollTrigger.create({
+                trigger: img,
+                toggleClass: 'active',
+                start: "top 90%",
+                end: "top 20%",
+                //se descativa para que no aparesca la regla en la pagina
+                //markers: true
+            })
+        })
+    </script>
+    </div>
+
+    <!--!Card-->
+    <div class="tabla">
+        <div class="wrapper">
+            <div class="card">
+                <img src="images/china.jpg" alt="">
+                <div class="info">
+                    <h4> Read more</h4>
+                    <p class="textop">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat minima quibusdam. Laborum, cum, quas maxime saepe aperiam optio sapiente quaerat voluptas labore, laboriosam commodi corporis suscipit velit laudantium ut?
+                    </p>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="images/Mexico.jpg" alt="">
+                <div class="info">
+                    <h4> Read more</h4>
+                    <p class="textop">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat minima quibusdam. Laborum, cum, quas maxime saepe aperiam optio sapiente quaerat voluptas labore, laboriosam commodi corporis suscipit velit laudantium ut?
+                    </p>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="images/espana.jpg" alt="">
+                <div class="info">
+                    <h4> Read more</h4>
+                    <p class="textop">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat minima quibusdam. Laborum, cum, quas maxime saepe aperiam optio sapiente quaerat voluptas labore, laboriosam commodi corporis suscipit velit laudantium ut?
+                    </p>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <!--!Se agrego un div para el mapa y los contactos-->
+    <div>
+            <!--GOOGLE MAPS-->
+        <div id="contenido" class="contenedor-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d833.6247550871782!2d-97.25852181333518!3d18.377457067430633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5b77f1dbd77d3%3A0x8e65024e09ecf1ae!2sZocalo%20del%20Municipio%20de%20Ajalpan!5e0!3m2!1ses-419!2smx!4v1647022293992!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div>
+        <div class="content" id="grupo1">
+            <h1 class="logo">
+                Contactanos <span>:3</span>
+            </h1>
+            
+            <div>
+                <div class="contact-form">
+                    Contact Us
+                    <form action="">
+                        <p>
+                            <label for="fullname">
+                                Full name
+                            </label>
+                            <input type="text" name="fullname" id="fullname">
+                        </p>
+
+                        <p>
+                            <label>
+                                <label> Email Adress</label>
+                                <input type="email" name="email">
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>Phone</label>
+                            <input type="tel" name="phone">
+                        </p>
+
+                        <p>
+                            <label>Affair</label>
+                            <input type="text" name="affair">
+                        </p>
+
+                        <p class="block">
+                            <label>Message</label>
+                            <textarea name="message" rows="3"></textarea>
+                        </p>
+
+                        <p class="block">
+                            <button type="submit">Send</button>
+                        </p>
+                    </br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    
+    
 </body>
 </html>

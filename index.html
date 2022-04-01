@@ -152,13 +152,12 @@
     </div>
     <br>
     <br>
-    
+    <!--!div para el Contacto-->
     <div>
-        <div class="content" id="grupo1">
+        <div class="content" id="grupo1" onsubmit="return Comprobar();">
             <h1 class="logo">
                 Contactanos <span>:3</span>
             </h1>
-            
             <div>
                 <div class="contact-form">
                     Contact Us
@@ -167,29 +166,29 @@
                             <label for="fullname">
                                 Full name
                             </label>
-                            <input type="text" name="fullname" id="fullname">
+                            <input type="text" name="fullname" id="fullname" placeholder="Ingrese su nombre" maxlength="20" onkeypress="Nombre()">
                         </p>
 
                         <p>
                             <label>
                                 <label> Email Adress</label>
-                                <input type="email" name="email">
+                                <input type="email" name="email" placeholder="Email" id="email">
                             </label>
                         </p>
 
                         <p>
                             <label>Phone</label>
-                            <input type="tel" name="phone">
+                            <input type="tel" name="phone" placeholder="Numero de telefono de 10 digitos" id="Tel" maxlength="10" onkeypress="return soloNumeros(event);">
                         </p>
 
                         <p>
-                            <label>Affair</label>
-                            <input type="text" name="affair">
+                            <label>Direccion</label>
+                            <input type="text" placeholder="Nombre de la Calle" id="Calle" name="Calle">
                         </p>
 
                         <p class="block">
                             <label>Message</label>
-                            <textarea name="message" rows="3"></textarea>
+                            <textarea name="Sugerencias" id="Sugerencias" rows="3"></textarea>
                         </p>
 
                         <p class="block">
@@ -202,7 +201,7 @@
         </div>
     </div>
     <br><br><br><br>
-    
+    <script src="index.js"></script>
     
 </body>
 </html>
